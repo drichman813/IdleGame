@@ -6,10 +6,24 @@
     <title>Idle Lightspeed</title>
 </head>
 <body>
-    <button onclick="gather()">Click me!</button>
-    <div id="clicks">Gathering Actions: 0</div>
-    <div id="clickXP">Gathering XP: 0</div>
-    <div id="gatheringTrueFalse">Currently Gathering: false</div>
+    <header class="gameHeader">Idle Game</header>
+    <div class="skill-container">
+        <div class="gathering">
+            <button class="button" onclick="gather()">Start Gathering!</button>
+            <div id="gatheringLvl">Gathering Level: 0</div>
+            <div id="gatheringClicks">Gathering Actions: 0</div>
+            <div id="gatheringXP">Gathering XP: 0</div>
+            <div id="gatheringTrueFalse">Currently Gathering: false</div>
+        </div>
+
+        <div class="foraging">
+            <button class="button" onclick="forage()">Start Foraging!</button>
+            <div id="foragingLvl">Foraging Level: 0</div>
+            <div id="foragingClicks">Foraging Actions: 0</div>
+            <div id="foragingXP">Foraging XP: 0</div>
+            <div id="foragingTrueFalse">Currently Foraging: false</div>
+        </div>
+    </div>
 </body>
 <script src="main.js"></script>
 </html>
