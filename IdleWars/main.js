@@ -1,15 +1,21 @@
-var gatheringLevel = 0;
-var gatheringClicks = 0;
-var gatheringXP = 0;
-var gatheringActive = false;
-var gathering = null;
-var foragingLevel = 0;
-var foragingClicks = 0;
-var foragingXP = 0;
-var foragingActive = false;
-var foraging = null;
-var performingAction = false;
-
+var inventory = {
+    items: {},
+    add: function(key, item) {
+        if (item !== null)
+            this.items[key] = item
+    },
+    remove: function(key) {
+        this.items[key] = null
+    },
+    get: function(key){
+        if (this.items[key])
+        {
+            return this.items[key];
+        } else {
+            return null;
+        }
+    }
+}
 //Gathering Code
 function gather() {
     if (foragingActive == true) {
@@ -26,39 +32,6 @@ function gather() {
     }
 }
 
-function gainGatheringXP(){
-    var test = Math.floor(Math.random() * 10);
-    if (test < 7) {
-        gatheringXP += 10;
-    }
-    document.getElementById("gatheringXP").textContent = "Gathering XP: " + gatheringXP;
-}
-
-function startGathering() {
-    incrementGathering();
-    gainGatheringXP();
-    updateGatheringLevel();
-}
-
-function incrementGathering() {
-    gatheringClicks += 1;
-    document.getElementById("gatheringClicks").textContent = "Gathering Actions: " + gatheringClicks;
-}
-
-function updateGatheringLevel() {
-    if (gatheringXP >= 100) {
-        gatheringLevel = 1;
-    }
-    else if (gatheringXP >= 500) {
-        gatheringLevel = 2;
-    }
-    document.getElementById("gatheringLvl").textContent = "Gathering Level: " + gatheringLevel;
-}
-
-function updateGatheringActive(){
-    document.getElementById("gatheringTrueFalse").textContent = "Currently Gathering: " + gatheringActive;
-}
-
 //Foraging Code
 function forage() {
     if (gatheringActive == true) {
@@ -73,35 +46,11 @@ function forage() {
         updateForagingActive();
         clearInterval(foraging);
     }
-}function gainForagingXP(){
-    var test = Math.floor(Math.random() * 10);
-    if (test < 7) {
-        foragingXP += 10;
-    }
-    document.getElementById("foragingXP").textContent = "Foraging XP: " + foragingXP;
 }
 
-function startForaging() {
-    incrementForaging();
-    gainForagingXP();
-    updateForagingLevel();
-}
 
-function incrementForaging() {
-    foragingClicks += 1;
-    document.getElementById("foragingClicks").textContent = "Foraging Actions: " + foragingClicks;
-}
 
-function updateForagingLevel() {
-    if (foragingXP >= 100) {
-        foragingLevel = 1;
-    }
-    else if (foragingXP >= 500) {
-        foragingLevel = 2;
-    }
-    document.getElementById("foragingLvl").textContent = "Foraging Level: " + foragingLevel;
-}
 
-function updateForagingActive(){
-    document.getElementById("foragingTrueFalse").textContent = "Currently Foraging: " + foragingActive;
-}
+
+
+
