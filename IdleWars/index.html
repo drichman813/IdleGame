@@ -6,15 +6,17 @@
     <title>Idle Lightspeed</title>
 </head>
 <body>
-    <div id="page-container">
-        <!-- The sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">Idle Game</div>
-            <a onclick="changePage(1)">Gathering</a>
-            <a onclick="changePage(2)">Foraging</a>
-        </div>
-        <main id="main-container">
-            <div class="game-left-panel">
+        <!-- Tab Links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openSkill(event, 'Gathering')" id="defaultOpen">Gathering</button>
+                <button class="tablinks" onclick="openSkill(event, 'Foraging')">Foraging</button>
+                <button class="tablinks" onclick="openSkill(event, 'Inventory')">Inventory</button>
+            </div>
+
+            <br>
+            
+            <!-- Tab Content -->
+            <div id="Gathering" class="tabcontent">
                 <div class="gathering-container">
                     <button class="button" onclick="gather()">Start Gathering!</button>
                     <div id="gatheringLvl">Gathering Level: 0</div>
@@ -23,22 +25,25 @@
                     <div id="gatheringTrueFalse">Currently Gathering: false</div>
                 </div>
             </div>
-            <div class="game-right-panel">
+            
+            <div id="Foraging" class="tabcontent">
+                <div class="foraging">
+                    <button class="button" onclick="forage()">Start Foraging!</button>
+                    <div id="foragingLvl">Foraging Level: 0</div>
+                    <div id="foragingClicks">Foraging Actions: 0</div>
+                    <div id="foragingXP">Foraging XP: 0</div>
+                    <div id="foragingTrueFalse">Currently Foraging: false</div>
+                </div>
+            </div>
+            
+            <div id="Inventory" class="tabcontent">
                 <div class="inventory">
                     <div id="inventoryList">Inventory List</div>
                     <div class="inventory-window"></div>
                     <div class="inv-item"></div>
                 </div>
             </div>
-            <div class="foraging">
-                <button class="button" onclick="forage()">Start Foraging!</button>
-                <div id="foragingLvl">Foraging Level: 0</div>
-                <div id="foragingClicks">Foraging Actions: 0</div>
-                <div id="foragingXP">Foraging XP: 0</div>
-                <div id="foragingTrueFalse">Currently Foraging: false</div>
-            </div>
-        </main>
-    </div>
+
 </body>
 <script src="game/skills/gather.js"></script>
 <script src="game/skills/forage.js"></script>

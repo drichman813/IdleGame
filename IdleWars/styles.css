@@ -17,6 +17,25 @@
     transform: translateY(4px);
 }
 
+.tablinks {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: darkred;
+    border: none;
+    border-radius: 15px;
+}
+
+.tablinks:hover {background-color: #3e8e41}
+
+.tablinks:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .sidebar-header {
     border: black;
     font-size: 2em;
@@ -54,7 +73,6 @@
     width: 400px;
     height: 250px;
     border: 3px;
-    solid:fff;
     border-radius: 15px;
     padding: 10px;
     box-sizing: border-box;
