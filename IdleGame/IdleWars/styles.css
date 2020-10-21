@@ -1,0 +1,168 @@
+
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: darkred;
+    border: none;
+    border-radius: 15px;
+    height:auto;
+    width: 250px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.tablinks {
+    margin: 15px 15px;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: darkred;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.tablinks:hover {background-color: rosybrown}
+
+.tablinks:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.sidebar-header {
+    border: black;
+    font-size: 2em;
+    text-align: center;
+}
+
+.gathering {
+    margin: 40px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.foraging {
+    margin: 40px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.hunting {
+    margin: 40px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.skill-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    font: 15px Impact;
+    background-color: grey;
+    color: white;
+}
+
+.inventory{
+    right: 150px;
+    margin: 40px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.inventory-window{
+    width: 400px;
+    height: 250px;
+    border: 3px;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: darkred;
+}
+
+#game-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    max-width: 100%;
+    margin-left: 200px;
+}
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font: 20px Impact;
+    text-align: center;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.sidebar-icon {
+    width:50px;
+    hieght: 50px;
+}
+
